@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #EFF2EB;
+}
+
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 920px;
+  min-height: 600px;
+  background: white;
+  border: 1px solid rgba(52, 89, 89, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 30px 60px -20px rgba(8, 64, 27, 0.25);
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  overflow: hidden;
+}
+
+.login-photo {
+  background-image: url('/login-photo.gif');
+  background-size: cover;
+  background-position: center;
+  background-color: #345959;
+  position: relative;
+}
+
+.login-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 64, 27, 0) 40%, rgba(8, 64, 27, 0.55) 100%);
+}
+
+.login-photo .caption {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 1.75rem;
+  right: 1.75rem;
+  color: #EFF2EB;
+  z-index: 1;
+}
+
+.login-photo .caption p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+
+.mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #107357;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #EFF2EB;
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-form h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #08401B;
+  margin: 0 0 0.5rem;
+}
+
+.login-form .lead {
+  font-size: 0.95rem;
+  color: #345959;
+  line-height: 1.5;
+  max-width: 26ch;
+  margin: 0 0 2rem;
+}
+
+.entra-button {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #107357;
+  color: #EFF2EB;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 1.25rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.entra-button:hover {
+  background: #04BF8A;
+  color: #08401B;
+}
+
+.entra-button:active {
+  transform: translateY(1px);
+}
+
+.entra-button:focus-visible {
+  outline: 3px solid #04BF8A;
+  outline-offset: 2px;
+}
+
+.entra-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.session-card {
+  width: 100%;
+  max-width: 300px;
+  background: #EFF2EB;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.session-card .label {
+  font-size: 0.78rem;
+  color: #345959;
+  margin: 0 0 0.25rem;
+}
+
+.session-card .value {
+  font-size: 0.9rem;
+  color: #08401B;
+  margin: 0;
+  word-break: break-all;
+}
+
+.logout-button {
+  width: 100%;
+  max-width: 300px;
+  background: transparent;
+  color: #345959;
+  border: 1px solid rgba(52, 89, 89, 0.3);
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.logout-button:hover {
+  border-color: #08401B;
+  color: #08401B;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entra-button, .logout-button {
+    transition: none;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 760px) {
+  .login-card {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .login-photo {
+    min-height: 200px;
+  }
+
+  .login-photo .caption {
+    display: none;
+  }
+
+  .login-form {
+    padding: 2.25rem 1.75rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .login-screen {
+    padding: 1rem;
+  }
+
+  .login-card {
+    border-radius: 14px;
+  }
+
+  .login-photo {
+    min-height: 160px;
+  }
+}
