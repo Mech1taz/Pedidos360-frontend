@@ -220,3 +220,150 @@ body {
     min-height: 160px;
   }
 }
+/* Dashboard */
+.dashboard {
+  min-height: 100vh;
+  background: #EFF2EB;
+}
+
+.dashboard-header {
+  background: #08401B;
+  color: #EFF2EB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.dashboard-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dashboard-header .brand .mark {
+  margin: 0;
+  width: 34px;
+  height: 34px;
+  font-size: 1rem;
+}
+
+.dashboard-header .brand h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.dashboard-header .user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.dashboard-header .user-info span {
+  color: rgba(239, 242, 235, 0.85);
+}
+
+.dashboard-header .logout-button {
+  width: auto;
+  max-width: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-color: rgba(239, 242, 235, 0.4);
+  color: #EFF2EB;
+}
+
+.dashboard-header .logout-button:hover {
+  border-color: #EFF2EB;
+  color: #EFF2EB;
+  background: rgba(239, 242, 235, 0.08);
+}
+
+/* Pedidos */
+.orders-panel {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto 0;
+  padding: 0 1.5rem;
+  text-align: left;
+}
+
+.orders-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.orders-header h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #08401B;
+  margin: 0;
+}
+
+.orders-header .entra-button {
+  width: auto;
+  max-width: none;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.9rem;
+}
+
+.orders-error {
+  background: #fdecec;
+  color: #a33;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+
+.orders-empty {
+  color: #345959;
+  font-size: 0.95rem;
+}
+
+.orders-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(52, 89, 89, 0.15);
+  border-radius: 12px;
+  background: white;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.orders-table thead th {
+  background: #08401B;
+  color: #EFF2EB;
+  font-weight: 500;
+}
+
+.orders-table tbody tr:nth-child(even) {
+  background: #EFF2EB;
+}
+
+.orders-table tbody tr:hover {
+  background: rgba(4, 191, 138, 0.12);
+}
+
+@media (max-width: 600px) {
+  .orders-panel {
+    padding: 0 1rem;
+  }
+}
